@@ -107,4 +107,6 @@ And run it:
 ____
 Resources:
 
+ - http://nodejs.org/
+ - http://gulpjs.com/
  - https://github.com/substack/stream-handbook
