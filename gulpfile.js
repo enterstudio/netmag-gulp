@@ -8,9 +8,7 @@ var livereload = require('gulp-livereload');
 gulp.task('compass', function() {
     gulp.src('./assets/css/*.scss')
         .pipe(compass({
-            config_file: './compass/config.rb',
-            css: 'stylesheets',
-            sass: 'sass'
+            config_file: './compass/config.rb'
         }))
         .pipe(minifyCSS())
         .pipe(gulp.dest('./assets/css/'))
