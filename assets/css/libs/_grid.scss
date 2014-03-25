@@ -1,0 +1,36 @@
+// ------------------------------------------------------------
+// Standard grid set up
+// ------------------------------------------------------------
+
+@include grid;											// Include the grid mixin
+
+.row {
+	overflow: hidden; 									// act as a clearfix 
+	padding-left: 10px; 								// pad the edges away from the browser for smaller view ports
+	padding-right: 10px;								// pad the edges away from the browser for smaller view ports
+	margin-left: auto;									// center layout
+	margin-right: auto;									// center layout
+	
+	// Set up a two column grid here and beyond this breakpoint
+	// See _settings.scss for this value
+	@media screen and (min-width: 460px) { 
+		@include grid_columns(2); 						// Fetch a two column grid
+	}
+	
+	// Set up a six column grid here and beyond this breakpoint
+	@media screen and (min-width: 800px) { 
+		@include grid_columns(6);						// Fetch a six column grid
+	}
+	
+	// Set up an 8 column grid here and beyond this breakpoint
+	@media screen and (min-width: 940px) { 
+		@include grid_columns(8);						// Fetch a eight column grid
+	}
+	
+	// Fit the width to a maximum
+	@media screen and (min-width: 1080px) { 
+		width: 1060px;									// Fix width
+		padding-left: 0;								// Remove padding
+		padding-right: 0;								// Remove padding
+	}
+}

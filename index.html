@@ -1,0 +1,78 @@
+<!doctype html>
+<!--[if lt IE 9 ]> <html lang="en-GB" class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en-GB" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-GB" class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="initial-scale=1">
+		<title>Sassaparilla: NetMag Tutorial</title>
+		<link href="assets/css/screen.css" rel="stylesheet" type="text/css" media="all"/>
+	</head>
+
+	<body>
+		<div class="grid-demo">
+
+			<header class="grid-demo__header">
+				<div class="row">
+					<div class="colspan2-2">
+						<h1>Sassaparilla: Net Mag tutorial</h1>
+					</div>
+				</div>
+			</header>
+
+<!-- Grid divisions that change at each breakpoint -->
+			<div class="row">
+				<!-- span 2 of 2 columns, 4 of 6 columns and 3 of 8 columns -->
+				<div class="colspan2-2 colspan6-4 colspan8-3 as-grid">
+					<div class="grid-demo__module">
+						a
+					</div>
+				</div>
+				<!-- span 1 of 2 columns, 2 of 6 columns and 2 of 8 columns -->
+				<div class="colspan2-1 colspan6-2 colspan8-2 as-grid">
+					<div class="grid-demo__module">
+						b
+					</div>
+				</div>
+				<!-- span 1 of 2 columns, 2 of 6 columns and 1 of 8 columns -->
+				<div class="colspan2-1 colspan6-2 colspan8-1 as-grid">
+					<div class="grid-demo__module">
+						c
+					</div>
+				</div>
+				<!-- span 2 of 2 columns, 4 of 6 columns and 2 of 8 columns -->
+				<div class="colspan2-2 colspan6-4 colspan8-2 as-grid">
+					<div class="grid-demo__module">
+						d
+					</div>
+				</div>
+			</div>
+
+<!-- Grid divisions that both change and remain at each breakpoint -->
+
+			<div class="row">
+				<!-- span 2 of 2 columns always (100%) -->
+				<div class="colspan2-2 as-grid">
+					<div class="grid-demo__module">
+						1
+					</div>
+				</div>
+				<!-- span 1 of 2 columns (50%) until we hit 8 columns then span 3 of 8 columns -->
+				<div class="colspan2-1 colspan8-3 as-grid">
+					<div class="grid-demo__module">
+						2
+					</div>
+				</div>
+				<!-- span 1 of 2 columns (50%) until we hit 8 columns then span 5 of 8 columns -->
+				<div class="colspan2-1 colspan8-5 as-grid">
+					<div class="grid-demo__module">
+						3
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</body>
+
+</html>

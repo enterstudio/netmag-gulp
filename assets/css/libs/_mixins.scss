@@ -1,0 +1,65 @@
+// -------------------------------------------------------
+// Grid
+// -------------------------------------------------------
+
+// Generate columns names span-#
+// Called by: @include grid_columns(#) where # is the amount of columns needed
+
+@mixin grid_columns($columns){
+	// Column classes
+	@for $i from 1 through $columns{
+		.colspan#{$columns}-#{$i}{
+			width: ((100% / $columns)*$i);		
+		}
+	}
+	// Pull classes
+	@for $i from 1 through $columns{
+		.push#{$columns}-#{$i}{
+			margin-left: ((100% / $columns)*$i);		
+		}
+	}
+	// Push classes
+	@for $i from 1 through $columns{
+		.pull#{$columns}-#{$i}{
+			margin-right: ((100% / $columns)*$i);		
+		}
+	}
+	// Disable push at column set
+	.push-disable#{$columns}{
+		margin-left: 0;		
+	}
+	// Disable pull at column set
+	.pull-disable#{$columns}{
+		margin-right: 0;		
+	}
+	// Hide at column set
+	.hide-at#{$columns} {
+		display: none;
+	}
+	// Show as block element at column set
+	.block-show-at#{$columns} {
+		display: block;
+	}
+	// Show as inline element at column set
+	.inline-show-at#{$columns} {
+		display: inline;
+		display: inline-block;
+	}
+	
+}
+
+// Set up grid syntax
+
+@mixin grid {	
+	// Widths
+	*[class*="colspan"] {
+		width: 100%; 
+		display: block;
+	}
+	// Floats
+	*[class*="as-grid"] {
+		float: left;
+		display: inline;
+		display: inline-block;
+	}
+}

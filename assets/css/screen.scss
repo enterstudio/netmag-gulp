@@ -1,0 +1,66 @@
+// ::Imports pre-render. Must be after reset
+// ------------------------------------------------------------
+@import "libs/reset";
+@import "libs/mixins";
+
+
+
+/* ::Base styles */
+/* ------------------------------------------------------------ */
+
+html {
+	font-size: 100%;
+	line-height: 1.35;
+}
+
+body {
+	@extend .font-body; // Extend body font from typography.scss
+	background: #fff;
+	color: #aaa;
+}
+
+a {
+	color: orange;
+	text-decoration: none;
+	&:hover, &:focus {
+		color: green;
+	}
+}
+
+/* ::Import styles */
+/* ------------------------------------------------------------ */
+
+@import "libs/typography"; 				// Base level typography
+@import "libs/grid"; 					// Grid system
+
+
+/* ::Grid demo styles */
+/* ------------------------------------------------------------ */
+
+.grid-demo {
+	*[class*="colspan"] {
+		.grid-demo__module {
+			background: #eee;
+		}
+		&:nth-of-type(odd) {
+			.grid-demo__module {
+				background: #ddd;
+			}
+		}
+	}
+}
+
+.grid-demo__header {
+	background: #333;
+	padding: 20px 0;
+	margin-bottom: 10px;
+	h1 {
+		color: #fff;
+	}
+}
+
+.grid-demo__module {
+	padding: 10px;
+	text-align: center;
+	margin: 10px 0;
+}

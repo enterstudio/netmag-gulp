@@ -1,0 +1,22 @@
+// ------------------------------------------------------------
+// Global typography
+// ------------------------------------------------------------
+
+
+// ------------------------------------------------------------
+// Fonts
+// ------------------------------------------------------------
+
+.font-body 					{  font-family: 'Open Sans', sans-serif, sans-serif; }
+
+
+// ------------------------------------------------------------
+// Core typography
+// ------------------------------------------------------------
+
+p, span, cite, ol, ul, pre, label, input, textarea 	{ font-size: 16px; }
+h1, h2, h3, h4, h5, h6 								{ font-size: 18px; }
+ul, ol 												{ list-style: none; } 						
+li 													{ line-height: inherit; }					
+strong, b 											{ font-weight: 700; }
+em, i, q 											{ font-style: italic; }
